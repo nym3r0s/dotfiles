@@ -1,0 +1,4 @@
+alacritty
+font-fira-code
+iina
+whatsapp

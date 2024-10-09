@@ -137,11 +137,14 @@ export LC_ALL=en_US.UTF-8
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export GLOVO_NPM_TOKEN=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
 
 # PATH additions
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/Users/gokul/hackspace/clickhouse:$PATH"
+
+# Modern Unix
+alias cat="bat --style=changes"
+alias ls="eza"
 
 # PyEnv
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
@@ -166,10 +169,6 @@ export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-# SRCGRPH
-export SRC_ENDPOINT=https://glovo.sourcegraph.com
-export SRC_ACCESS_TOKEN=sgp_4359bb6047c0d143_55983d5a57916c5167001f7b8993528eb8142059
-
 # FZF 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -180,11 +179,9 @@ export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
 #MySQL client
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
-# Krew K8S
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-#JIRA_CLI
-export JIRA_API_TOKEN=ATATT3xFfGF0OYmnO3CO_jvCGhVzNh-rDgkREiUVe5MNtWZ36LBqnhqrDkfNlyAUKsOkkOE9WZmtiHck3vJLMBbV6qmvMLt21O-zdABGgyTLD7TVEzuYb3lNMP6iZua8-r7eINoIgrhd2gHa6pSaY3repe7NyyNkhHcy0bydD9botiN9lONLxWE=9C028D1E
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/Users/gokul.srinivas/.colima/docker.sock
+export TESTCONTAINERS_RYUK_DISABLED=true
+export DOCKER_HOST=unix:///Users/gokul.srinivas/.colima/docker.sock
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
