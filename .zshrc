@@ -139,45 +139,30 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # PATH additions
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/Users/gokul/hackspace/clickhouse:$PATH"
 
 # Modern Unix
 alias cat="bat --style=changes"
 alias ls="eza"
 
-# PyEnv
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
-source <(kubectl completion zsh)
-alias k="kubectl"
-alias kns="kubens"
-alias kctx="kubectx"
-alias acd="argocd"
-
-# Terraform version to tfswitch
-export TF_VERSION=1.0.11
-
 # GPG
 export GPG_TTY=$(tty)
 
-# GOLANG
-export GOPATH=$HOME/go
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+export TERM="xterm-256color"
+
+## GOLANG
+#export GOPATH=$HOME/go
+#export GOROOT="$(brew --prefix golang)/libexec"
+#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # FZF 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # POSTGRESQL utils
-export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
+#export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
 
 #MySQL client
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+#export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/Users/gokul.srinivas/.colima/docker.sock
 export TESTCONTAINERS_RYUK_DISABLED=true
