@@ -156,7 +156,7 @@ export TERM="xterm-256color"
 
 # FZF 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(/opt/homebrew/bin/fzf --zsh)
 
 # POSTGRESQL utils
 #export PATH="$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH"
